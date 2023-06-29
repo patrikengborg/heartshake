@@ -6,6 +6,10 @@ export default {
 		fontFamily: {
 			sans: ['IBM Plex Sans', 'sans-serif']
 		},
+		container: {
+			center: true,
+			padding: '2rem'
+		},
 		extend: {}
 	},
 	plugins: []

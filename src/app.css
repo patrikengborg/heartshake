@@ -4,6 +4,16 @@
 
 @layer base {
 	body {
-		@apply antialiased;
+		@apply antialiased text-zinc-800;
+	}
+}
+
+@layer utilities {
+	.btn {
+		@apply rounded flex items-center justify-center bg-sky-600 text-sky-50 px-4 py-2 font-medium flex;
+	}
+
+	.btn--lg {
+		@apply text-lg;
 	}
 }

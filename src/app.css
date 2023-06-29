@@ -4,13 +4,21 @@
 
 @layer base {
 	body {
-		@apply antialiased text-zinc-800;
+		@apply text-zinc-800 antialiased;
 	}
 }
 
 @layer utilities {
 	.btn {
-		@apply rounded flex items-center justify-center bg-sky-600 text-sky-50 px-4 py-2 font-medium flex;
+		@apply flex flex items-center justify-center rounded bg-sky-600 px-4 py-2 font-medium text-sky-50;
+
+		&[disabled] {
+			@apply cursor-not-allowed opacity-50;
+		}
+	}
+
+	.btn-border {
+		@apply border border-sky-600 bg-transparent text-sky-600 hover:bg-sky-600 hover:text-sky-50;
 	}
 
 	.btn--lg {

@@ -6,6 +6,8 @@
 
 	export let outcome_id: string | null = 'rest_and_come_back_later'
 
+	let rick_rolled = false
+
 	$: outcome = $page.data.outcomes.find((outcome: Outcome) => outcome.id === outcome_id) || {}
 
 	interface Icon {
@@ -23,39 +25,40 @@
 </script>
 
 <div class="my-auto">
-	<div class="p-6">
-		<h1 class="font-medium text-xl border-b mb-6 pb-1">Your results</h1>
-		<div class="flex gap-4">
-			<figure class="mb-4 {styles[outcome.id]?.class}">
-				<svelte:component this={styles[outcome.id]?.icon} size="36" />
-			</figure>
+	{#if rick_rolled}
+		<iframe
+			title="Rick Astley - Never Gonna Give You Up (Video)"
+			src="https://giphy.com/embed/Ju7l5y9osyymQ"
+			width="300"
+			height="225"
+			frameBorder="0"
+			allowFullScreen
+		/>
+	{:else}
+		<div>
+			<h1 class="mb-6 border-b pb-1 text-xl font-medium">Your results</h1>
+			<div class="flex gap-4">
+				<figure class="mb-4 {styles[outcome.id]?.class}">
+					<svelte:component this={styles[outcome.id]?.icon} size="36" />
+				</figure>
 
-			<p class="mb-10">
-				{outcome.text}
-			</p>
+				<p class="mb-10">
+					{outcome.text}
+				</p>
+			</div>
+
+			{#if outcome.show_booking_button}
+				<p>
+					<button class="btn w-full gap-2" type="button" on:click={() => (rick_rolled = true)}>
+						<span>Book an appointment</span>
+						<Phone size="16" />
+					</button>
+				</p>
+			{/if}
 		</div>
+	{/if}
 
-		{#if !outcome.show_booking_button}
-			<p>
-				<button class="btn gap-2 w-full">
-					<span>Book an appointment</span>
-					<Phone size="16" />
-				</button>
-			</p>
-		{/if}
-		<p class="text-center mt-6">
-			<a href="/" class="text-sky-600 hover:underline font-medium">Take the test again</a>
-		</p>
-	</div>
+	<p class="mt-6 text-center">
+		<a href="/" class="btn btn-border">Take the test again</a>
+	</p>
 </div>
-
-<style>
-	.result-ok {
-	}
-
-	.result-ok {
-	}
-
-	.result-ok {
-	}
-</style>

@@ -2,14 +2,14 @@
 	import { HeartHandshake } from 'lucide-svelte'
 </script>
 
-<main class="my-auto w-full flex flex-col items-center text-center">
-	<figure class="text-sky-600 mb-4 heart">
+<main class="my-auto flex w-full flex-col items-center text-center">
+	<figure class="heart mb-4 text-sky-600">
 		<HeartHandshake size="36" />
 	</figure>
 
-	<h1 class="font-medium text-2xl text-center mb-2">Welcome to HeartEase</h1>
+	<h1 class="mb-2 text-center text-2xl font-medium">Welcome to HeartShake</h1>
 
-	<p class="text-zinc-600 mb-6">
+	<p class="mb-6 text-zinc-600">
 		Your digital solution to understanding and managing heartburn. Start your journey towards a
 		heartburn-free life today.
 	</p>
@@ -24,7 +24,7 @@
 			opacity: 0.8;
 		}
 		50% {
-			transform: scale(1.2);
+			transform: scale(1.25);
 			opacity: 1;
 		}
 		100% {

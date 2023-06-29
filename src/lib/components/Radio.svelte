@@ -25,7 +25,7 @@
 	}
 
 	label:has(:checked) {
-		@apply bg-sky-950 text-sky-50;
+		@apply bg-sky-800 text-sky-50;
 
 		& .unchecked {
 			@apply hidden;

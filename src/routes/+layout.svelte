@@ -11,7 +11,7 @@
 
 {#key data.url}
 	<div
-		class=" flex min-h-screen w-full flex-col"
+		class=" d-min-h-screen flex w-full flex-col"
 		in:fade={{ duration: 200, delay: 400 }}
 		out:fade={{ duration: 200 }}
 	>

@@ -9,6 +9,11 @@
 }
 
 @layer utilities {
+	.d-min-h-screen {
+		@apply min-h-screen;
+		min-height: 100dvh;
+	}
+
 	.btn {
 		@apply flex flex items-center justify-center rounded bg-sky-600 px-4 py-2 font-medium text-sky-50;
 

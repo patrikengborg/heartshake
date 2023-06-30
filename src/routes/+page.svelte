@@ -2,7 +2,7 @@
 	import { HeartHandshake } from 'lucide-svelte'
 </script>
 
-<main class="my-auto flex w-full flex-col items-center text-center">
+<main class="container my-auto flex w-full flex-col items-center text-center">
 	<figure class="heart mb-4 text-sky-600">
 		<HeartHandshake size="36" />
 	</figure>

@@ -88,7 +88,7 @@
 	}
 </script>
 
-<header class="-mx-8 mb-6 border-b border-sky-100 bg-sky-50 px-8 pt-3">
+<header class="mb-6 border-b border-sky-100 bg-sky-50 px-8 pt-3">
 	<div class="relative mb-3 flex items-center justify-center">
 		{#if completed_steps.length > 0 && !test_is_complete}
 			<button
@@ -116,7 +116,7 @@
 </header>
 
 {#key test_is_complete}
-	<main class="flex flex-grow flex-col" in:fade={{ duration: 500, delay: 300 }}>
+	<main class="container flex flex-grow flex-col" in:fade={{ duration: 500, delay: 300 }}>
 		{#if test_is_complete}
 			<Results {outcome_id} />
 		{:else}
